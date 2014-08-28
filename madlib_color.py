@@ -1,8 +1,8 @@
 #Prompting user for input.
 name = raw_input('\033[0;34mWhat is your name?\033[0;m ')
-location = raw_input('Where are you from? ')
+location = raw_input('\033[0;31mWhere are you from?\033[0;m ')
 transportation = raw_input('\033[0;34mDid you arrive by driving, walking, or using public transportation?\033[0;m ')
-hobby = raw_input('What do you like to do in your spare time? ')
+hobby = raw_input('\033[0;31mWhat do you like to do in your spare time?\033[0;m ')
 dislike = raw_input('\033[0;34mWhat do you really hate?\033[0;m ')
 
 #Story that input will be put into.
