@@ -10,7 +10,7 @@ while question > num:
 #incrementing by one
     num += 1
 #test if number is a multiple of both 3 and 4 not including zero
-    if num % 3 ==0 and num % 4 == 0 and num != 0:
+    if num % 3 == 0 and num % 4 == 0 and num != 0:
         print('\033[1;32mfizzbuzz\033[1;m')
 #test if number is a multiple of 3 not including zero
     elif num % 3 == 0 and num != 0:
@@ -20,7 +20,7 @@ while question > num:
         print('\033[1;34mbuzz\033[1;m')
 #otherwise print number incremented
     else:
-         print(num)
+        print(num)
 
 
 
