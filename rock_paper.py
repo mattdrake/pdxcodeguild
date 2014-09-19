@@ -19,11 +19,18 @@ class Game():
                    "Paper\n"
                    "Lizard\n"
                    "Scissors", 'blue')
+            """this function prints out a list of available "playable" options for the user to pick
+            in order to play against the computer, with each option beating 2 other options in the list."""
             #create list of possible answers to pull from
 
         def match():
             playable()
             possible = ['Scissors', 'Paper', 'Rock', 'Lizard', 'Spock']
+
+            """this function is the main part of the game itself, creating a list
+             of the possible options from the function playable() that can then be turned
+             into the offset, which will be accessed through a matrix along with the offset of the
+             option chosen by the computer randomly to determine which of the two beats the other."""
 
             #create dictionary to correspond with what element from "possible" list
             # corresponds with what the action does by indices
