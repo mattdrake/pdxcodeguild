@@ -71,7 +71,7 @@ class Game():
                 cprint("It's a tie! ", 'red', 'on_grey')
 
                 #prompting user if they want to continue playing or exit the game
-                play_again = raw_input(colored("Would you like to play again? ", 'yellow')).lower()
+                play_again = raw_input(colored("Would you like to play again? Yes or No ", 'yellow')).lower()
                 self.ties += 1
                 if play_again in ['y', 'yes']:
                     match()
@@ -94,7 +94,7 @@ class Game():
                     print computer_choice + ' ' + result + ' ' + player_choice + '.' + \
                         colored(' Computer wins!', 'red', 'on_grey')
                     self.computer_score += 1
-                    play_again = raw_input(colored("Would you like to play again? ", 'yellow')).lower()
+                    play_again = raw_input(colored("Would you like to play again? Yes or No ", 'yellow')).lower()
                     if play_again in ['y', 'yes']:
                         match()
                     else:
@@ -114,7 +114,7 @@ class Game():
                     print player_choice + ' ' + result + ' ' + computer_choice + '.' + \
                           colored(' Player Wins!', 'green')
                     self.player_score += 1
-                    play_again = raw_input(colored("Would you like to play again? ", 'yellow')).lower()
+                    play_again = raw_input(colored("Would you like to play again? Yes or No ", 'yellow')).lower()
                     if play_again in ['y', 'yes']:
                         match()
                     else:
