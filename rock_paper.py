@@ -61,7 +61,7 @@ class Game():
 
             #determining if the choices of both the user and computer are the same, resulting in a "tie"
             if random_choice == index:
-                cprint ("It's a tie! ", 'red', 'on_grey')
+                cprint("It's a tie! ", 'red', 'on_grey')
 
                 #prompting user if they want to continue playing or exit the game
                 play_again = raw_input(colored("Would you like to play again? ", 'yellow')).lower()
@@ -70,6 +70,12 @@ class Game():
                     match()
                 else:
                     cprint("Thank you for playing! ", 'yellow')
+                    cprint("Your score was " + str(self.player_score) + ", and the computer's score was "
+                           + str(self.computer_score),  'blue')
+                    if self.ties == 1:
+                        cprint("There was just " + str(self.ties) + " tie!", 'red')
+                    else:
+                        cprint("There were " + str(self.ties) + " ties! ", 'yellow')
 
             else:
                 try:
@@ -79,7 +85,7 @@ class Game():
 
                     result = d[str(random_choice) + str(index)]
                     print computer_choice + ' ' + result + ' ' + player_choice + '.' + \
-                          colored(' Computer wins!', 'red', 'on_grey')
+                        colored(' Computer wins!', 'red', 'on_grey')
                     self.computer_score += 1
                     play_again = raw_input(colored("Would you like to play again? ", 'yellow')).lower()
                     if play_again in ['y', 'yes']:
@@ -89,10 +95,9 @@ class Game():
                         cprint("Your score was " + str(self.player_score) + ", and the computer's score was "
                                + str(self.computer_score),  'blue')
                         if self.ties == 1:
-                            cprint("There was just " + str(self.ties) + " tie!")
+                            cprint("There was just " + str(self.ties) + " tie!", 'red')
                         else:
                             cprint("There were " + str(self.ties) + " ties! ", 'yellow')
-
 
                 except:
                     #if the user's choice is the first of the index of the dictionary above,
@@ -110,7 +115,7 @@ class Game():
                         cprint("Your score was " + str(self.player_score) + ", and the computer's score was "
                                + str(self.computer_score),  'blue')
                         if self.ties == 1:
-                            cprint("There was just " + str(self.ties) + " tie!")
+                            cprint("There was just " + str(self.ties) + " tie!", 'red')
                         else:
                             cprint("There were " + str(self.ties) + " ties! ", 'yellow')
 
