@@ -2,7 +2,9 @@ __author__ = 'drake'
 
 #import random module for randomly generated things throughout program
 import random
-from termcolor import *
+from termcolor import colored, cprint
+
+
 
 
 #create class that will hold defined game function
@@ -14,28 +16,27 @@ class Game():
         self.ties = 0
 
         def playable():
+            """this function prints out a list of available "playable" options for the user to pick
+            in order to play against the computer, with each option beating 2 other options in the list."""
             cprint("Rock\n"
                    "Spock\n"
                    "Paper\n"
                    "Lizard\n"
                    "Scissors", 'blue')
-            """this function prints out a list of available "playable" options for the user to pick
-            in order to play against the computer, with each option beating 2 other options in the list."""
             #create list of possible answers to pull from
 
         def match():
-            playable()
-            possible = ['Scissors', 'Paper', 'Rock', 'Lizard', 'Spock']
-
             """this function is the main part of the game itself, creating a list
              of the possible options from the function playable() that can then be turned
              into the offset, which will be accessed through a matrix along with the offset of the
              option chosen by the computer randomly to determine which of the two beats the other."""
+            playable()
+            possible = ['Scissors', 'Paper', 'Rock', 'Lizard', 'Spock']
 
             #create dictionary to correspond with what element from "possible" list
             # corresponds with what the action does by indices
 
-            d = {'01': 'Cuts', '12': 'Covers', '23': 'Crushes',
+            victory_conditions = {'01': 'Cuts', '12': 'Covers', '23': 'Crushes',
                  '34': 'Poisons', '40': 'Smashes', '03': 'Decapitate', '31': 'Eats',
                  '14': 'Disproves', '42': 'Vaporizes', '20': 'Crushes'}
 
@@ -90,7 +91,7 @@ class Game():
                     # of an index of the dictionary.
                     #if the computer's choice is first, the computer would win and the following code executed.
 
-                    result = d[str(random_choice) + str(index)]
+                    result = victory_conditions[str(random_choice) + str(index)]
                     print computer_choice + ' ' + result + ' ' + player_choice + '.' + \
                         colored(' Computer wins!', 'red', 'on_grey')
                     self.computer_score += 1
@@ -110,7 +111,7 @@ class Game():
                     #if the user's choice is the first of the index of the dictionary above,
                     # the following code would be executed.
 
-                    result = d[str(index) + str(random_choice)]
+                    result = victory_conditions[str(index) + str(random_choice)]
                     print player_choice + ' ' + result + ' ' + computer_choice + '.' + \
                           colored(' Player Wins!', 'green')
                     self.player_score += 1
