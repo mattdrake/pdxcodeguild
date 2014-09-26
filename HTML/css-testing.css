@@ -1,0 +1,67 @@
+#welcome {
+        width: 450px;
+        background-color: grey;
+        text-shadow: 2px 2px 8px #FF0000;
+        text-align: center;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid black;
+}
+
+#all_about {
+        border: 2px solid black;
+        text-align: center;
+        font-weight: bold;
+        background-color: grey;
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+#stuff {
+        border: 2px solid black;
+        background-color: grey;
+        color: #FFFFF0;
+        text-align: center;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.git_link {
+        border: 2px solid black;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+        background-color: grey;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+}
+
+.python_link {
+        border: 2px solid black;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: bold;
+        background-color: grey;
+}
+
+.mozilla_dev {
+        text-align: center;
+        font-weight: bold;
+        color: red;
+}
+
+#stuff_title {
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        color: black;
+}
+
