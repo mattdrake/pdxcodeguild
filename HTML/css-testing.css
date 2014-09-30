@@ -1,0 +1,100 @@
+#welcome {
+        text-shadow: 2px 2px 8px #FF0000;
+        text-align: center;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+#all_about {
+
+        text-align: center;
+        font-weight: bold;
+
+}
+
+#stuff {
+        border: 2px solid black;
+        background-color: grey;
+        color: white;
+        text-align: center;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.git_link {
+        text-align: center;
+        font-weight: bold;
+        color: #000099;
+
+}
+
+.python_link {
+        border: 2px solid black;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: bold;
+        background-color: grey;
+}
+
+.mozilla_dev {
+        text-align: center;
+        font-weight: bold;
+        color: #CF0000;
+        font-style: oblique;
+        font-size: 40px;
+}
+
+#stuff_title {
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        color: black;
+}
+
+a:link {
+        color: purple;
+}
+
+a:hover {
+        color: red;
+        text-decoration: blink;
+}
+
+ul {
+    text-align: center;
+    background-color: grey;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+
+}
+
+li {
+    display: inline;
+}
+
+#python_gif {
+    width: 320px;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    padding: 8px;
+    -webkit-box-shadow: 1px 2px 1px #d1d1d1;
+    -moz-box-shadow: 1px 2px 1px #d1d1d1;
+    box-shadow: 1px 2px 1px #d1d1d1;
+}
+
+#mdn_icon:hover {
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform:scale(1.5,1.5);
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+
+}
