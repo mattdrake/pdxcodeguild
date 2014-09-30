@@ -1,9 +1,15 @@
 #welcome {
+<<<<<<< HEAD
+=======
+        width: 450px;
+        background-color: grey;
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
         text-shadow: 2px 2px 8px #FF0000;
         text-align: center;
         font-weight: bold;
         margin-left: auto;
         margin-right: auto;
+<<<<<<< HEAD
 }
 
 #all_about {
@@ -11,12 +17,29 @@
         text-align: center;
         font-weight: bold;
 
+=======
+        border: 2px solid black;
+}
+
+#all_about {
+        border: 2px solid black;
+        text-align: center;
+        font-weight: bold;
+        background-color: grey;
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
 }
 
 #stuff {
         border: 2px solid black;
         background-color: grey;
+<<<<<<< HEAD
         color: white;
+=======
+        color: #FFFFF0;
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
         text-align: center;
         width: 450px;
         margin-left: auto;
@@ -24,9 +47,21 @@
 }
 
 .git_link {
+<<<<<<< HEAD
         text-align: center;
         font-weight: bold;
         color: #000099;
+=======
+        border: 2px solid black;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+        background-color: grey;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
 
 }
 
@@ -43,9 +78,13 @@
 .mozilla_dev {
         text-align: center;
         font-weight: bold;
+<<<<<<< HEAD
         color: #CF0000;
         font-style: oblique;
         font-size: 40px;
+=======
+        color: red;
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
 }
 
 #stuff_title {
@@ -55,6 +94,7 @@
         color: black;
 }
 
+<<<<<<< HEAD
 a:link {
         color: purple;
 }
@@ -98,3 +138,5 @@ li {
     -moz-opacity: 1;
 
 }
+=======
+>>>>>>> cacb40fd7a45c09076eac3d0e48467de45107627
