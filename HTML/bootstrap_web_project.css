@@ -1,18 +1,17 @@
-.navbar navbar-default {
-    background-color: green;
+.zen {
+
+    color: white;
+    font-weight: bold;
+    font-size: 180%;
+
 
 }
 
-.navbar-brand {
-    color: green;
+#zen-title {
+
+    font-weight: bold;
+    font-size: 200%;
+
 }
 
-#stuff {
-        border: 2px solid black;
-        background-color: grey;
-        color: white;
-        text-align: center;
-        width: 450px;
-        margin-left: auto;
-        margin-right: auto;
-}
+
