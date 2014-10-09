@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //create the receipt to work with and one to print out
+    var table_receipt ={};
+    var print_receipt = [];
+    var patrons = parseFloat(prompt("Please tell us how many people were dining:"));
+    console.log(typeof(patrons));
+
+    function even_split() {
+        var choice = prompt("How would you like to split the check? Even or Itemized: ").toLowerCase();
+
+        if (choice === "even") {
+            input_receipt();
+            tip();
+            calc_even_bill();
+        }
+
+        else {
+            input_receipt();
+
+            party = [];
+            // itemize.... ask who is who based on party number = Person {a, b, c}, ask what did a have by looping through
+            // receipt, grab costs and add add tip
+            for  (var p = 0; p< patrons; p++ ) {
+                var name = prompt("What is your name?").toLowerCase();
+                var diner = new Person(name);
+                party.push(diner);
+                console.log(typeof (name));
+                console.log(typeof (party));
+            }
+
+            function who_bought_what() {
+
+                for (var item in table_receipt) {
+
+                    var buyer = prompt("who bought the " + item + " ?");
+
+                    for (var i = 0; i < party.length; i++) {
+                        if (buyer === party[i].name) {
+                            party[i].costs.push(table_receipt[item]);
+                            console.log(typeof (party[i].costs))
+                        }
+                    }
+                }
+            }
+
+            who_bought_what();
+
+            //this totals each persons items
+            Person.prototype.getCosts = function() {
+                for (var price = 0; price< this.costs.length; price++) {
+                    this.total += this.costs[price];
+                }
+                return this.total
+            };
+            var total_individ = function (){
+                //for each person, take total and add tip, them alert
+                for (var diner = 0; diner < party.length; diner++) {
+                    party[diner].getCosts();
+                    alert (party[diner].name + " your total bill is " + (party[diner].total))
+                }
+
+            };
+
+            total_individ();
+            tip();
+            function add_tip_itemized() {
+                for (var payer = 0; payer < party.length; payer++) {
+                    alert(party[payer].name + " your bill plus tip is " + ((party[payer].total) + (total_bill()*(percent/patrons))).toFixed(2));
+                }
+            }
+        }
+        add_tip_itemized()
+    }
+
+    function Person(name) {
+        this.name = name.toLowerCase();
+        this.costs = [];
+        this.total = 0;
+    }
+
+    function calc_even_bill() {
+        var even_bill = total_bill()*(percent + 1) / patrons;
+        alert ("Each person owes " + even_bill + " for total and tip.")
+    }
+
+    function total_bill() {
+        var table_bill = 0;
+        for (var price in table_receipt) {
+            table_bill += (table_receipt[price]);
+        }
+        console.log(typeof(table_bill));
+        return table_bill;
+    }
+
+    function input_receipt() {
+
+        var item_name = prompt("Enter an item from your receipt: ").toLowerCase();
+        var item_cost = prompt("How much was the item?");
+
+        table_receipt[item_name] = parseFloat(item_cost);
+        print_receipt.push(" " + item_name, " " + item_cost);
+        finished_items();
+
+        function finished_items() {
+
+            var finished = prompt("Do you have another item? Yes or No").toLowerCase();
+
+            if (finished === "yes") {
+                input_receipt();
+            }
+
+            else if (finished === "no") {
+                alert("Your receipt includes the following items and costs " + print_receipt);
+            }
+
+            else {
+                alert("We are not sure what you typed, please try again");
+                finished_items();
+            }
+        }
+    }
+
+    function tip() {
+        alert("The table's total bill is " + total_bill());
+
+        var tip_total = prompt("How was your service? Enter the number for: Good = 15, great = 20, or excellent = 25%? ");
+        parseFloat(tip_total);{
+            console.log(typeof(tip_total/100));
+            percent = (tip_total / 100);
+            percent.toFixed(2);
+            ind_percent = ((tip_total / 100)/patrons);
+            ind_percent.toFixed(2);
+        }
+        //if else to change tip multiplier based on party size. More than 6 people requires a greater tip.//
+        if (patrons < 6) {
+            alert("Your total tip is $" + (total_bill() * percent) +
+                    " and per person gratuity is $" + (total_bill()*ind_percent));
+        }
+
+        //Because tip must be at least 18% the 15% choice doesn't apply and user must choose a higher one.//
+        else {
+            if(tip === .15) {
+                alert("Hey cheapskates, the minimum is 18%! Press return to choose a more suitable amount. ");
+                var larger_tip = prompt("Would you like to do 18, 20 or 25%? ");
+                parseInt(larger_tip);
+                larger_tip = larger_tip / 100;
+                var lg_ind_percent = larger_tip/patrons
+                alert("Your total tip is $" + total_bill() * larger_tip  +
+                        " and per person gratuity is $" + (total_bill()*lg_ind_percent));
+            }
+            else {
+                alert("Hey big tipper, your gratuity is $" + total_bill() * percent +
+                        " and per person gratuity is $" + (total_bill()*ind_percent));
+            }
+        }
+    }
+    even_split();
+
+</script>
+</body>
+</html>
