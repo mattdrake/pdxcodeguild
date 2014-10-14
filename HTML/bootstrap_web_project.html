@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" type="text/css" href="bootstrap_web_project.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Latest compiled and minified JavaScript -->
     <script rel="javascript" type=text/javascript src="/jquery/jquery.min.js"></script>
+    <script rel="javascript" type=text/javascript src="/bootstrap_web_project.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <title>My Python Page</title>
+
+
+    <title>Matt Drake</title>
 
 </head>
 
-<body background="http://2.bp.blogspot.com/-b-5JsXsvnOs/UwwOo8cUxlI/AAAAAAAACRQ/Gy55i1X40Ck/s1600/python.JPG">
+<body background="/Pictures/annuli11366.jpg">
     <nav class=" navbar navbar-default navbar-static-top navbar-inverse " role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,24 +31,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">All About Python</a>
+          <a class="navbar-brand" href="#">Matt Drake</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="https://github.com/mattdrake">My Github</a></li>
-            <li><a href="http://mattdrake.carbonmade.com/">My Portfolio</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Me <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="https://www.python.org/">Python</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></li>
-                <li><a href="https://www.reddit.com/r/Python/">Python Reddit</a></li>
+                <li><a href="https://github.com/mattdrake"><i class="fa fa-github fa-lg"></i> My Github</a></li>
+                <li><a href="http://mattdrake.carbonmade.com/"><i class="fa fa-briefcase fa-lg"></i> My Portfolio</a></li>
+                <li><a href="https://www.linkedin.com/pub/matt-drake/55/754/670/">
+                    <i class="fa fa-linkedin-square fa-lg"></i> My LinkedIn</a></li>
                 <li class="divider"></li>
-                <li><a href="http://www.codecademy.com/tracks/python">Python Codecademy</a></li>
-                <li class="divider"></li>
-                <li><a href="http://www.pythonchallenge.com/">The Python Challenge</a></li>
+                <li><a href=mailto:mattsdrake@gmail.com"><i class="fa fa-envelope fa-lg"></i> Email Me</a></li>
               </ul>
             </li>
           </ul>
@@ -52,30 +53,42 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="zen"><marquee style="bottom: 0; height: auto; position: absolute; text-align: center;"
-                              behavior="scroll" direction="up" scrollamount="1.5" >
-        <div id="zen-title"><p>The Zen Of Python</p></div>
-        <p>Beautiful is better than ugly.</p>
-        <p>Explicit is better than implicit.</p>
-        <p>Simple is better than complex.</p>
-        <p>Complex is better than complicated.</p>
-        <p>Flat is better than nested.</p>
-        <p>Sparse is better than dense.</p>
-        <p>Readability counts.</p>
-        <p>Special cases aren't special enough to break the rules.</p>
-        <p>Although practicality beats purity.</p>
-        <p>Errors should never pass silently.</p>
-        <p>Unless explicitly silenced.</p>
-        <p>In the face of ambiguity, refuse the temptation to guess.</p>
-        <p>There should be one-- and preferably only one --obvious way to do it.</p>
-        <p>Although that way may not be obvious at first unless you're Dutch.</p>
-        <p>Now is better than never.</p>
-        <p>Although never is often better than right now.</p>
-        <p>If the implementation is hard to explain, it's a bad idea.</p>
-        <p>If the implementation is easy to explain, it may be a good idea.</p>
-        <p>Namespaces are one honking great idea -- let's do more of those!</p>
-            <p>Tim Peters</p></marquee>
-       </div>
+    <!--Carousel-->
+
+    <div id="myCarousel" class="carousel slide jumbotron" data-ride="carousel">
+        <div class="container">
+            <!--Carousel indicators(little dots)-->
+            <ol class="carousel-indicators">
+             <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <h1>Content with images to go here.</h1>
+                </div>
+                <div class="item">
+                    <h1>Some projects that I've worked on.</h1>
+                        <ul><a href="http://mattdrake.carbonmade.com/"><img src="/Pictures/OneMonthRails.png"></a></ul>
+                </div>
+                <div class="item">
+                    <h1>Even more content with images to go here.</h1>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <!--End Carousel-->
+
+
+
 
 
 

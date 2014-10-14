@@ -14,4 +14,55 @@
 
 }
 
+.navbar {
+    margin-bottom: 100px;
+}
 
+body {
+    background: url(/Pictures/annuli11366.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.dropdown-menu {
+    background-color: rgba(5, 4, 4, 1);
+}
+
+.myCarousel {
+    padding-top: 200px;
+}
+
+.icon-prev, .icon-next{
+    color: black;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+/*.carousel-indicators.active {*/
+    /*background-color: rgba(3, 3, 3, 1);*/
+
+/*}*/
+
+/*.carousel-indicators li {*/
+    /*background-color: #FFFFF0;*/
+/*}*/
+
+#myCarousel {
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 700px;
+    background-color: grey;
+}
+
+.jumbotron {
+    text-align: center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
