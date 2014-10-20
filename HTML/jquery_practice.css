@@ -1,0 +1,17 @@
+#zen-title {
+    color: blue;
+    font-weight: bolder;
+    font-size: 200%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#zen-list {
+     text-align: center;
+     width: 430px;
+     margin-left: auto;
+     margin-right: auto;
+ }

@@ -1,20 +1,12 @@
 /**
  * Created by matt on 10/2/14.
  */
-var n = prompt("Check your number", "Type your number here");
-
-n = parseInt(n);
-
-if (n == 0)
-{
-    alert("The number is zero");
+var table_receipt = {chicken: 4.50, salad: 7.50, coffee: 3.50};
+function total_bill() {
+    table_receipt.total = 0;
+    for (var price in table_receipt)
+        table_receipt.total += (table_receipt.hasOwnProperty(price));
+    alert("The table's total bill is " + table_receipt);
+    console.log(table_receipt.total);
 }
-else if (n%2)
-{
-    alert("The number is odd");
-}
-else
-{
-    alert("The number is even");
-}
-
+total_bill()

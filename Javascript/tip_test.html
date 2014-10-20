@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+var table_receipt = {chicken: 4.50, salad: 7.50, coffee: 3.50};
+function total_bill() {
+    var table_bill = 0;
+    for (var price in table_receipt) {
+        table_bill += (table_receipt[price]);
+    }
+    alert("The table's total bill is " + table_bill);
+}
+total_bill()
+</script>
+
+
+</body>
+</html>
