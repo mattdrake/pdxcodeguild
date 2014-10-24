@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}" />
+<link rel="stylesheet" type = "text/css" href="{% static 'polls/style.css' %}" />
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Django Polls Tutorial</h1>
+        {% block index %}
+        {% endblock index %}
+    </div>
+</div>
+
+</body>
+
+
+<script type="text/javascript" src="{% static 'polls/js/jquery.min.js' %}">
+
+</script>
+<script type="text/javascript" src="{% static 'polls/js/bootstrap.min.js' %}">
+</script>
+</html>

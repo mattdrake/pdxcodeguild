@@ -1,0 +1,26 @@
+{% extends "polls/base.html" %}
+
+    {% block index %}
+
+    {% if latest_question_list %}
+
+        <ul class="list-group">
+        {% for question in latest_question_list %}
+            <ul class="list-group-item list-group-item-info">
+                <a span class="label label-info" href="{% url 'polls:detail' question.id %}">
+                    <p>{{ question.question_text }}</p>
+                </a>
+            </ul>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+
+    {% endblock index %}
+
+
+
+
+
