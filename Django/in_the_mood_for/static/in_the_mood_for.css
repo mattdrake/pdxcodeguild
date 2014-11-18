@@ -112,3 +112,12 @@
     padding-right: 10%;
     bottom: 0;
 }
+
+#footer {
+    color: white;
+    text-align: left;
+    float: right;
+    position: fixed;
+    bottom: 0;
+
+}

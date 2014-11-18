@@ -4,7 +4,7 @@ import json
 
 
 api_key = '?apikey=[38bcb60077966674b2985d33ad35abbd]'
-endpoint = 'http://private-770c9-themoviedb.apiary-mock.com/3/movie/26/images'
+endpoint = 'http://private-770c9-themoviedb.apiary-mock.com/3/list/27'
 
 
 headers = {
