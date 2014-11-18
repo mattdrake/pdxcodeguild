@@ -16,5 +16,14 @@ urlpatterns = patterns('',
     url(r'^sci_fi/$', 'in_the_mood_for.views.sci_fi'),
 
     # romance/romantic comedy
-    url(r'^romantic/$', 'in_the_mood_for.views.romantic'),
+    url(r'^romance/$', 'in_the_mood_for.views.romance'),
+
+    # action
+    url(r'^action/$', 'in_the_mood_for.views.action'),
+
+    # action
+    url(r'^comedy/$', 'in_the_mood_for.views.comedy'),
+
+    # fantasy
+    url(r'^fantasy/$', 'in_the_mood_for.views.fantasy'),
 )

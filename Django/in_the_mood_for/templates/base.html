@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <title>In The Mood For</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/in_the_mood_for.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/textualizer.min.js"></script>
+    <script src="/static/js/textualizer.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="/static/js/in_the_mood_for.js"></script>
+
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">In The Mood For</a>
+    <div class="data_test"><h5>API Results to go here.</h5></div>
+    <div id="txtlzr-output"></div>
+
+
+    <div class="leftcurtain"> <img src="/static/images/frontcurtain.jpg"></div>
+    <div class="rightcurtain"> <img src="/static/images/frontcurtain.jpg"></div>
+    <div class="container-fluid">
+        <div class="row row-centered">
+            <div class="popcorns">
+                <ul class="click-zone">
+                    <div class="col-md-1 col-centered padding" id="horror"><img src="/static/images/popcorn_horror2.png"></div>
+                    <div class="col-md-1 col-centered padding" id="sci_fi-fantasy"><img src="/static/images/popcorn_fantasy.png"></div>
+                    <div class="col-md-1 col-centered padding" id="comedy"><img src="/static/images/popcorn_comedy.png"></div>
+                    <div class="col-md-1 col-centered padding" id="action"><img src="/static/images/popcorn_action.png"></div>
+                    <div class="col-md-1 col-centered padding" id="documentary"><img src="/static/images/popcorn_documentary.png"></div>
+                    <div class="col-md-1 col-centered padding" id="kids"><img src="/static/images/popcorn_kids.png"></div>
+                    <div class="col-md-1 col-centered padding" id="romance"><img src="/static/images/popcorn_romance.png"></div>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{% static "/base.html" %}">Home</a></li>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
 </body>
 </html>

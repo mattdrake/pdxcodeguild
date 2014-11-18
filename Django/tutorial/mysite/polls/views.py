@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
+import json
 
 from polls.models import Question, Choice
 
@@ -51,5 +52,31 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
+
+
+def create_post(request):
+    if request.method == 'POST':
+        post_text = request.POST.get('the_post')
+        response_data = {}
+
+        post = Post(text=post_text, author=request.user)
+        post.save()
+
+        response_data['result'] = 'Create post successful!'
+        response_data['postpk'] = post.pk
+        response_data['text'] = post.text
+        response_data['created'] = post.created.strftime('%B %d, %Y %I:%M %p')
+        response_data['author'] = post.author.username
+
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )
+
 
 # Create your views here.

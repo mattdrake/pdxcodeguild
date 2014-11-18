@@ -1,0 +1,114 @@
+*{
+ margin:0;
+ padding:0;
+ }
+ body {
+ background-image: url("/static/images/theater.jpg");
+ background-repeat: no-repeat;
+ background-position: center bottom;
+ background-attachment: fixed;
+ background-size: cover;
+ }
+ img{
+ border: none;
+ }
+ .leftcurtain{
+ width: 50%;
+ height: 75%;
+ top: 0px;
+ left: 0px;
+ position: absolute;
+ }
+ .rightcurtain{
+ width: 51%;
+ height: 75%;
+ right: 0px;
+ top: 0px;
+ position: absolute;
+ }
+ .rightcurtain img, .leftcurtain img{
+ width: 100%;
+ height: 100%;
+ }
+
+ /*.click-zone {
+     position: absolute;
+     bottom: 10px;
+     color: white;
+     margin-left: 200px;
+     display: inline;
+ }*/
+
+ /*#horror {
+     padding-right: 10%;
+ }
+
+ #comedy {
+     padding-right: 10%;
+
+ #action {
+   padding-right: 10%;
+ }
+
+#sci_fi-fantasy {
+    padding-right: 10%;
+
+}*/
+
+#txtlzr-output {
+    font-size: 90px;
+    height: 300px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.data_test {
+    display: none;
+    font-size: 70px;
+    height: 200px;
+    width: 600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+
+.popcorns {
+    bottom: 0;
+    position: absolute;
+}
+
+.container-fluid {
+    display: inline-block;
+    bottom: 0;
+}
+
+.row-centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    bottom: 0px;
+
+}
+
+.padding {
+    padding-right: 10%;
+    bottom: 0;
+}

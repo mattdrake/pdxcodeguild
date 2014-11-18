@@ -14,5 +14,18 @@ def home(request):
 def sci_fi(request):
     return render_to_response("sci_fi.html")
 
-def romantic(request):
-    return render_to_response("romantic_comedy.html")
+
+def romance(request):
+    return render_to_response("romance.html")
+
+
+def action(request):
+    return render_to_response("action.html")
+
+
+def comedy(request):
+    return render_to_response("comedy.html")
+
+
+def fantasy(request):
+    return render_to_response("fantasy.html")
